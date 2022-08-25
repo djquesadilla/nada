@@ -2,7 +2,13 @@ import React from 'react';
 import BackgroundMusic from './BackgroundMusic';
 import './Nada.css';
 
-const story = ["First page of the book", "Second page of nada happening", "And third one is even Nadaer"]
+const story = [
+  "First page of the book",
+  "Second page of nada happening",
+  "And third one is even Nadaer",
+  "Here is infinity. Fill it.",
+  "This is a lie. Pretend you're painting it."
+];
 
 class StoryText extends React.Component {
   render() {
@@ -30,18 +36,18 @@ class NadaStory extends React.Component {
   render() {
     console.log(this.state.storyIndex)
     return <div className='nada-story'>
-    <StoryText storyText={story[this.state.storyIndex]}/>
-    <button className="btn" onClick={this.handleClick}>Next</button>
-  </div>;
+      <StoryText storyText={story[this.state.storyIndex]}/>
+      <button className="btn" onClick={this.handleClick}>Next</button>
+    </div>;
   }
 }
 
 class Nada extends React.Component {
   render() {
     return <div className='nada'>
-    <NadaStory />
-    <BackgroundMusic />
-    </div>
+      <NadaStory />
+      <BackgroundMusic />
+    </div>;
   }
 }
 
