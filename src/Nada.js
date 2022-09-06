@@ -34,7 +34,6 @@ class NadaStory extends React.Component {
     super(props);
     this.state = { storyIndex: 0 };
     // This binding is necessary to make `this` work in the callback
-    
     this.handleClick = this.handleClick.bind(this);
   }
 
