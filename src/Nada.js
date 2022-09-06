@@ -7,7 +7,7 @@ const story = [
   "Esta página tem um fantasma. Consegues vê-lo? Pinta-o de nenhuma cor.",
   "Isto é o interior de um balão. Usa a cor do ar para a colorir.",
   "Aqui está o infinito. Preenche-o.",
-  "Isto é uma menitra. Finge que a estás a pintar.",
+  "Isto é uma mentira. Finge que a estás a pintar.",
   "Isto é um buraco. Enche-o de coisa nenhuma.",
   "Este é o teu amigo imaginário. Pinta-o de uma cor que só tu consegues ver.",
   "Aqui está o silêncio. Usa uma cor muda para o preencher.",
