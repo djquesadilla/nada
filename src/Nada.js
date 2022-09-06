@@ -25,7 +25,7 @@ const story = [
 
 class StoryText extends React.Component {
   render() {
-    return <div className='story-text'>{this.props.storyText}</div>;
+    return <div className={this.props.fadeOut ? 'story-text fade-out-text': 'story-text fade-in-text'}>{this.props.storyText}</div>;
   }
 }
 
@@ -34,7 +34,8 @@ class NadaStory extends React.Component {
     super(props);
     this.state = { 
       storyIndex: 0,
-      fadeOut: false
+      fadeOut: false,
+      ready: true
     };
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
@@ -47,7 +48,8 @@ class NadaStory extends React.Component {
 
     this.setState(
       prevState => ({
-        fadeOut: true
+        fadeOut: true,
+        ready: false
       }));
 
     setTimeout(() => {
@@ -58,13 +60,20 @@ class NadaStory extends React.Component {
         })
       )
     }, 5000)
+
+    setTimeout(() => {
+      this.setState(
+        prevState => ({
+          ready: true
+        })
+      )
+    }, 8000)
   }
 
   render() {
-    console.log(this.state.storyIndex)
-    return <div className={this.state.fadeOut ? 'fade-out-text': 'fade-in-text'}>
-      <StoryText storyText={story[this.state.storyIndex]}/>
-      <button className="btn next-button" onClick={this.handleClick}>Next</button>
+    return <div className='nada-story'>
+      <StoryText storyText={story[this.state.storyIndex]} fadeOut={this.state.fadeOut} />
+      <button className="next-button" disabled={this.state.ready ? false : true} onClick={this.handleClick}>Next</button>
     </div>;
   }
 }
