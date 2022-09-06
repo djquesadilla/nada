@@ -64,7 +64,7 @@ class NadaStory extends React.Component {
     console.log(this.state.storyIndex)
     return <div className={this.state.fadeOut ? 'fade-out-text': 'fade-in-text'}>
       <StoryText storyText={story[this.state.storyIndex]}/>
-      <button className="btn" onClick={this.handleClick}>Next</button>
+      <button className="btn next-button" onClick={this.handleClick}>Next</button>
     </div>;
   }
 }

@@ -1,7 +1,20 @@
 /** NADA CODE **/
+.nada {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .story-text {
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 2em;
+}
+
+.next-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fade-in-text {
