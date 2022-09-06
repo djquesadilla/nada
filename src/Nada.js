@@ -21,12 +21,11 @@ const story = [
   "Nesta página está um camuflado para a neve. Pinta-o, mas só se tiveres a certeza de que não nenhum urso polar por perto.",
   "Isto é aquilo que tu eras antes de nasceres. Pinta com a cor daquilo que vais ser quando deixares de existir.",
   "Nesta página está um camaleão. Um camaleão muito bom, completamente camuflado. Pinta-o da cor que o rodeia.",
-  
 ];
 
 class StoryText extends React.Component {
   render() {
-    return <div className='story-text'>{this.props.storyText}</div>;
+    return <div className='story-text fade-in-text'>{this.props.storyText}</div>;
   }
 }
 
