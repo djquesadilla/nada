@@ -6,10 +6,21 @@
   align-items: center;
 }
 
+.nada-story {
+  display: grid;
+  align-content: end;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  box-sizing: content-box;
+  width: 80%;
+  height: 80%;
+  padding: 10px 5px 10px 5px;
+}
+
 .story-text {
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 2em;
   text-align: center;
+  padding: 10px 5px 10px 5px;
 }
 
 .next-button {
