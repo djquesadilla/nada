@@ -13,7 +13,7 @@
   box-sizing: content-box;
   width: 80%;
   height: 80%;
-  padding: 10px 5px 10px 5px;
+  padding: 20px 5px 20px 5px;
 }
 
 .story-text {
@@ -24,8 +24,43 @@
 }
 
 .next-button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
   display: block;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: normal;
   margin: 0 auto;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.next-button:disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.next-button:hover {
+  background-color: #ccc;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.next-button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 .fade-in-text {
