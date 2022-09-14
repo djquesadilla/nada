@@ -51,7 +51,7 @@ class NadaStory extends React.Component {
   render() {
     return <div className='nada-story'>
       <StoryText storyText={story[this.state.storyIndex]} fadeOut={this.state.fadeOut} />
-      <button className="next-button" disabled={this.state.ready ? false : true} onClick={this.handleClick}>Next</button>
+      <button className="nada-button" disabled={this.state.ready ? false : true} onClick={this.handleClick}>Next</button>
     </div>;
   }
 }

@@ -10,11 +10,13 @@ class Nada extends React.Component {
   static contextType = GameStatusContext;
 
   render() {
-    return <div className='nada'>
-      {(this.context === 'intro') && <NadaIntro />}
-      {(this.context === 'playing') && <NadaStory />}
-      {(this.context === 'credits') && <NadaCredits />}
-      <BackgroundMusic />
+    return <div className='nada-root'>
+      <div className='nada'>
+        {(this.context === 'intro') && <NadaIntro />}
+        {(this.context === 'playing') && <NadaStory />}
+        {(this.context === 'credits') && <NadaCredits />}
+        <BackgroundMusic />
+      </div>
     </div>;
   }
 }

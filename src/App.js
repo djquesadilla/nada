@@ -5,7 +5,7 @@ import Nada from './gameComponents/Nada';
 class App extends React.Component {
   render() {
     return (
-      <GameStatusContext.Provider value='intro'>
+      <GameStatusContext.Provider value='playing'>
         <Nada />
       </GameStatusContext.Provider>
     )

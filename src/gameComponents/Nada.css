@@ -1,12 +1,12 @@
 /** NADA CODE **/
-.nada {
+.nada-root {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nada-story {
+.nada {
   display: grid;
   align-content: end;
   box-shadow: 3px 3px 5px 6px #ccc;
@@ -23,7 +23,7 @@
   padding: 10px 5px 10px 5px;
 }
 
-.next-button {
+.nada-button {
   appearance: none;
   background-color: transparent;
   border: 2px solid #ccc;
@@ -47,18 +47,18 @@
   will-change: transform;
 }
 
-.next-button:disabled {
+.nada-button:disabled {
   color: #ccc;
   pointer-events: none;
 }
 
-.next-button:hover {
+.nada-button:hover {
   background-color: #ccc;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-.next-button:active {
+.nada-button:active {
   box-shadow: none;
   transform: translateY(0);
 }
