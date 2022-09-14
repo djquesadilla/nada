@@ -46,10 +46,6 @@ class NadaStory extends React.Component {
         })
       )
     }, 8000)
-
-    if(this.state.storyIndex === 1) {
-      this.props.endCredits();
-    }
   }
 
   render() {
