@@ -9,7 +9,8 @@ class Nada extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      gameStatus: 'intro'
+      gameStatus: 'intro',
+      startTime: Date.now(),
     };
 
     this.startPlaying = this.startPlaying.bind(this);
@@ -18,7 +19,7 @@ class Nada extends React.Component {
   }
 
   startPlaying() { this.setState({ gameStatus: 'playing' }); }
-  endCredits() { this.setState({ gameStatus: 'credits' }); }
+  endCredits() { this.setState({ gameStatus: 'credits', endTime: Date.now() }); }
   playAgain() { this.setState({ gameStatus: 'intro' }); }
 
   render() {
@@ -26,7 +27,7 @@ class Nada extends React.Component {
       <div className='nada'>
         {this.state.gameStatus === 'intro' && <NadaIntro startPlaying={this.startPlaying} />}
         {this.state.gameStatus === 'playing' && <NadaStory endCredits={this.endCredits} />}
-        {this.state.gameStatus === 'credits' && <NadaCredits playAgain={this.playAgain} />}
+        {this.state.gameStatus === 'credits' && <NadaCredits playAgain={this.playAgain} startTime={this.state.startTime} endTime={this.state.endTime} />}
         <BackgroundMusic />
       </div>
     </div>;
