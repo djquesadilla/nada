@@ -46,12 +46,20 @@ class NadaStory extends React.Component {
         })
       )
     }, 8000)
+
+    if(this.state.storyIndex === 1) {
+      this.props.endCredits();
+    }
   }
 
   render() {
     return <div className='nada-story'>
       <StoryText storyText={story[this.state.storyIndex]} fadeOut={this.state.fadeOut} />
-      <button className="nada-button" disabled={this.state.ready ? false : true} onClick={this.handleClick}>Next</button>
+      <button className="nada-button"
+              disabled={this.state.ready ? false : true} 
+              onClick={this.state.storyIndex === (story.length - 1) ? this.props.endCredits : this.handleClick}>
+              Next
+      </button>
     </div>;
   }
 }

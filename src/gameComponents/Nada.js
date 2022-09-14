@@ -4,17 +4,29 @@ import NadaCredits from './NadaCredits';
 import NadaIntro from './NadaIntro';
 import NadaStory from './NadaStory';
 import './Nada.css';
-import { GameStatusContext } from './GameStatusContext';
 
 class Nada extends React.Component {
-  static contextType = GameStatusContext;
+  constructor(props) {
+    super(props);
+    this.state = {
+      gameStatus: 'intro'
+    };
+
+    this.startPlaying = this.startPlaying.bind(this);
+    this.endCredits = this.endCredits.bind(this);
+    this.playAgain = this.playAgain.bind(this);
+  }
+
+  startPlaying() { this.setState({ gameStatus: 'playing' }); }
+  endCredits() { this.setState({ gameStatus: 'credits' }); }
+  playAgain() { this.setState({ gameStatus: 'intro' }); }
 
   render() {
     return <div className='nada-root'>
       <div className='nada'>
-        {(this.context === 'intro') && <NadaIntro />}
-        {(this.context === 'playing') && <NadaStory />}
-        {(this.context === 'credits') && <NadaCredits />}
+        {this.state.gameStatus === 'intro' && <NadaIntro startPlaying={this.startPlaying} />}
+        {this.state.gameStatus === 'playing' && <NadaStory endCredits={this.endCredits} />}
+        {this.state.gameStatus === 'credits' && <NadaCredits playAgain={this.playAgain} />}
         <BackgroundMusic />
       </div>
     </div>;
