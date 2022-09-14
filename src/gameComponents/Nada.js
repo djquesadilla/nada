@@ -11,9 +11,9 @@ class Nada extends React.Component {
 
   render() {
     return <div className='nada'>
-      {true && <NadaIntro />}
-      {true && <NadaStory />}
-      {true && <NadaCredits />}
+      {(this.context === 'intro') && <NadaIntro />}
+      {(this.context === 'playing') && <NadaStory />}
+      {(this.context === 'credits') && <NadaCredits />}
       <BackgroundMusic />
     </div>;
   }
