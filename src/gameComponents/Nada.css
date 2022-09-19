@@ -23,6 +23,18 @@
   padding: 10px 5px 10px 5px;
 }
 
+.credits-text {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+}
+
+.nada-credits a {
+  color: black;
+}
+
+
 .nada-button {
   appearance: none;
   background-color: transparent;
