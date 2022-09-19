@@ -22,7 +22,7 @@
 const story = [
   "This is the invisible man. Paint him transparent.",
   "This page has a ghost. Can you see it? Paint it with the none color.",
-  /*"This is the inside of a balloon. Use the color of the air to color it.",
+  "This is the inside of a balloon. Use the color of the air to color it.",
   "Here is infinity. Fill it.",
   "This is a lie. Pretend you are painting it.",
   "This is a hole. Fill it with nothing.",
@@ -37,7 +37,7 @@ const story = [
   "This is a series of unfounded fears. You can color them however you want, but if you paint outside the lines those fears become real.",
   "On this page is a snow camouflage. Paint it, but only if you are sure there are no polar bears around.",
   "This is what you were before you were born. Paint with the color of what you will be when you cease to exist.",
-  "On this page is a chameleon. A very good chameleon, completely camouflaged. Paint it the color that surrounds it.",*/
+  "On this page is a chameleon. A very good chameleon, completely camouflaged. Paint it the color that surrounds it.",
 ];
 
 export default story;

@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Nada from './gameComponents/Nada';
-import BackgroundMusic from './BackgroundMusic';
 import reportWebVitals from './reportWebVitals';
+import Music from './Music';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Nada />
-    <BackgroundMusic />
+    <Music />
   </React.StrictMode>
 );
 
