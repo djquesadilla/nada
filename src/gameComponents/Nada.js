@@ -1,5 +1,4 @@
 import React from 'react';
-import BackgroundMusic from '../BackgroundMusic';
 import NadaCredits from './NadaCredits';
 import NadaIntro from './NadaIntro';
 import NadaStory from './NadaStory';
@@ -10,7 +9,6 @@ class Nada extends React.Component {
     super(props);
     this.state = {
       gameStatus: 'intro',
-      startTime: Date.now(),
     };
 
     this.startPlaying = this.startPlaying.bind(this);
@@ -18,7 +16,7 @@ class Nada extends React.Component {
     this.playAgain = this.playAgain.bind(this);
   }
 
-  startPlaying() { this.setState({ gameStatus: 'playing' }); }
+  startPlaying() { this.setState({ gameStatus: 'playing', startTime: Date.now() }); }
   endCredits() { this.setState({ gameStatus: 'credits', endTime: Date.now() }); }
   playAgain() { this.setState({ gameStatus: 'intro' }); }
 
@@ -28,7 +26,6 @@ class Nada extends React.Component {
         {this.state.gameStatus === 'intro' && <NadaIntro startPlaying={this.startPlaying} />}
         {this.state.gameStatus === 'playing' && <NadaStory endCredits={this.endCredits} />}
         {this.state.gameStatus === 'credits' && <NadaCredits playAgain={this.playAgain} startTime={this.state.startTime} endTime={this.state.endTime} />}
-        <BackgroundMusic />
       </div>
     </div>;
   }
